@@ -1,0 +1,14 @@
+- hosts: dgx_pod_all_fabrics
+  name: startup
+  become: yes
+  gather_facts: no
+  ignore_errors: yes
+  tasks:
+    - name: remove stale motd
+      ansible.builtin.file:
+        path: /etc/profile.d/motd.sh
+        state: absent
+    - name: set motd
+      copy:
+        src: /home/cumulus/DGX/inventory/files/motd.sh
+        dest: /etc/profile.d/motd.sh
