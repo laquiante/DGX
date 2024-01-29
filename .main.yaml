@@ -1,0 +1,7 @@
+---
+- name: call oob-mgmt-server preparation
+  ansible.builtin.import_playbook: .oob-mgmt-server.yaml
+ 
+- name: call host preparation
+  ansible.builtin.import_playbook: .host.yaml
+  
