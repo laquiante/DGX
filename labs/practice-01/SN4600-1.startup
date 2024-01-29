@@ -1,0 +1,358 @@
+- header:
+    model: VX
+    nvue-api-version: nvue_v1
+    rev-id: 1.0
+    version: Cumulus Linux 5.7.0
+- set:
+    bridge:
+      domain:
+        br_default:
+          vlan:
+            121-122: {}
+    interface:
+      bond4:
+        bond:
+          lacp-bypass: on
+          member:
+            swp4: {}
+          mlag:
+            enable: on
+            id: 4
+        bridge:
+          domain:
+            br_default:
+              untagged: 122
+              vlan:
+                all: {}
+        type: bond
+      bond5:
+        bond:
+          lacp-bypass: on
+          member:
+            swp5: {}
+          mlag:
+            enable: on
+            id: 5
+        bridge:
+          domain:
+            br_default:
+              untagged: 122
+              vlan:
+                all: {}
+        type: bond
+      bond6:
+        bond:
+          lacp-bypass: on
+          member:
+            swp6: {}
+          mlag:
+            enable: on
+            id: 6
+        bridge:
+          domain:
+            br_default:
+              untagged: 122
+              vlan:
+                all: {}
+        type: bond
+      bond7:
+        bond:
+          lacp-bypass: on
+          member:
+            swp7: {}
+          mlag:
+            enable: on
+            id: 7
+        bridge:
+          domain:
+            br_default:
+              untagged: 122
+              vlan:
+                all: {}
+        type: bond
+      bond8:
+        bond:
+          lacp-bypass: on
+          member:
+            swp8: {}
+          mlag:
+            enable: on
+            id: 8
+        bridge:
+          domain:
+            br_default:
+              untagged: 122
+              vlan:
+                all: {}
+        type: bond
+      bond9:
+        bond:
+          lacp-bypass: on
+          member:
+            swp9: {}
+          mlag:
+            enable: on
+            id: 9
+        bridge:
+          domain:
+            br_default:
+              untagged: 122
+              vlan:
+                all: {}
+        type: bond
+      bond10:
+        bond:
+          lacp-bypass: on
+          member:
+            swp10: {}
+          mlag:
+            enable: on
+            id: 10
+        bridge:
+          domain:
+            br_default:
+              untagged: 122
+              vlan:
+                all: {}
+        type: bond
+      bond11:
+        bond:
+          lacp-bypass: on
+          member:
+            swp11: {}
+          mlag:
+            enable: on
+            id: 11
+        bridge:
+          domain:
+            br_default:
+              untagged: 122
+              vlan:
+                all: {}
+        type: bond
+      bond12:
+        bond:
+          lacp-bypass: on
+          member:
+            swp12: {}
+          mlag:
+            enable: on
+            id: 12
+        bridge:
+          domain:
+            br_default:
+              untagged: 122
+              vlan:
+                all: {}
+        type: bond
+      bond13:
+        bond:
+          lacp-bypass: on
+          member:
+            swp13: {}
+          mlag:
+            enable: on
+            id: 13
+        bridge:
+          domain:
+            br_default:
+              untagged: 122
+              vlan:
+                all: {}
+        type: bond
+      bond14:
+        bond:
+          lacp-bypass: on
+          member:
+            swp14: {}
+          mlag:
+            enable: on
+            id: 14
+        bridge:
+          domain:
+            br_default:
+              untagged: 122
+              vlan:
+                all: {}
+        type: bond
+      bond15:
+        bond:
+          lacp-bypass: on
+          member:
+            swp15: {}
+          mlag:
+            enable: on
+            id: 15
+        bridge:
+          domain:
+            br_default:
+              untagged: 122
+              vlan:
+                all: {}
+        type: bond
+      bond16:
+        bond:
+          lacp-bypass: on
+          member:
+            swp16: {}
+          mlag:
+            enable: on
+            id: 16
+        bridge:
+          domain:
+            br_default:
+              untagged: 122
+              vlan:
+                all: {}
+        type: bond
+      bond17:
+        bond:
+          lacp-bypass: on
+          member:
+            swp17: {}
+          mlag:
+            enable: on
+            id: 17
+        bridge:
+          domain:
+            br_default:
+              untagged: 122
+              vlan:
+                all: {}
+        type: bond
+      bond18:
+        bond:
+          lacp-bypass: on
+          member:
+            swp18: {}
+          mlag:
+            enable: on
+            id: 18
+        bridge:
+          domain:
+            br_default:
+              untagged: 122
+              vlan:
+                all: {}
+        type: bond
+      bond19:
+        bond:
+          lacp-bypass: on
+          member:
+            swp19: {}
+          mlag:
+            enable: on
+            id: 19
+        bridge:
+          domain:
+            br_default:
+              untagged: 122
+              vlan:
+                all: {}
+        type: bond
+      bond20:
+        bond:
+          lacp-bypass: on
+          member:
+            swp20: {}
+          mlag:
+            enable: on
+            id: 20
+        bridge:
+          domain:
+            br_default:
+              untagged: 122
+              vlan:
+                all: {}
+        type: bond
+      peerlink:
+        bond:
+          member:
+            swp57: {}
+            swp58: {}
+        type: peerlink
+      peerlink.4094:
+        base-interface: peerlink
+        type: sub
+        vlan: 4094
+      swp1:
+        bridge:
+          domain:
+            br_default:
+              access: 121
+        type: swp
+      swp2:
+        bridge:
+          domain:
+            br_default:
+              access: 121
+        type: swp
+      swp60:
+        type: swp
+      swp63:
+        type: swp
+      swp64:
+        type: swp
+      vlan121:
+        ip:
+          address:
+            10.227.52.2/26: {}
+          vrr:
+            address:
+              10.227.52.1/26: {}
+            enable: on
+            mac-address: 44:38:39:ff:ff:ff
+        type: svi
+        vlan: 121
+      vlan122:
+        ip:
+          address:
+            10.227.48.2/26: {}
+          vrr:
+            address:
+              10.227.48.1/26: {}
+            enable: on
+            mac-address: 44:38:39:ff:ff:ff
+        type: svi
+        vlan: 122
+    mlag:
+      backup:
+        192.168.200.3:
+          vrf: mgmt
+      enable: on
+      mac-address: 44:38:39:ff:ff:ff
+      peer-ip: linklocal
+      priority: 2048
+    router:
+      bgp:
+        autonomous-system: 4200000003
+        enable: on
+        router-id: 10.227.20.78
+      vrr:
+        enable: on
+    system:
+      hostname: SN4600-1
+    vrf:
+      default:
+        router:
+          bgp:
+            address-family:
+              ipv4-unicast:
+                enable: on
+                redistribute:
+                  connected:
+                    enable: on
+            enable: on
+            neighbor:
+              peerlink.4094:
+                remote-as: internal
+                type: unnumbered
+              swp60:
+                remote-as: external
+                type: unnumbered
+              swp63:
+                remote-as: external
+                type: unnumbered
+              swp64:
+                remote-as: external
+                type: unnumbered
