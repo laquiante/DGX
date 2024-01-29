@@ -6,6 +6,8 @@ CUMULUS_HOME="/home/cumulus"
 
 sudo ansible-playbook /home/ubuntu/DGX/.main.yaml
 
+# cp 1
+
 echo "Please consider switching to user to cumulus"
 echo "Please change into the now newley provided directory"
 
