@@ -1,5 +1,5 @@
 -
-  hosts: DGX-1 DGX-2 DGX-3 DGX4
+  hosts: DGX-1 DGX-2 DGX-3 DGX-4
   become: true
   user: ubuntu
   gather_facts: false
