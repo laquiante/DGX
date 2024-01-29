@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# ALQ, 汉堡 二零二四 年
+
+CUMULUS_HOME="/home/cumulus"
+
+sudo ansible-playbook /home/ubuntu/DGX/.main.yaml
+
+echo "Please consider switching to user to cumulus"
+echo "Please change into the now newley provided directory"
+
+sudo -i -u cumulus bash << EOF
+  cd "$CUMULUS_HOME"
+  echo "DIR :$PWD"
+  if [ ! -d "$CUMULUS_HOME/DGX" ]; then
+    git clone https://github.com/laquiante/DGX
+    echo "git clone done"
+  fi
+  if [ -d "$CUMULUS_HOME/DGX" ]; then
+    cd $CUMULUS_HOME/DGX
+    sudo chmod 744 $CUMULUS_HOME/DGX/start.sh
+    export PATH="$CUMULUS_HOME/DGX/:$PATH" 
+    echo "calling /home/cumulus/DGX/start.sh"
+    sudo bash "$CUMULUS_HOME/DGX/start.sh"
+  fi
+
+EOF
+#clear
+exit 0 
