@@ -1,0 +1,50 @@
+- header:
+    model: VX
+    nvue-api-version: nvue_v1
+    rev-id: 1.0
+    version: Cumulus Linux 5.7.0
+- set:
+    bridge:
+      domain:
+        br_default:
+          vlan:
+            '111': {}
+    interface:
+      swp1-11:
+        bridge:
+          domain:
+            br_default:
+              access: 111
+      swp1-11,51-52:
+        type: swp
+      vlan111:
+        ip:
+          address:
+            10.227.20.65/26: {}
+        type: svi
+        vlan: 111
+    router:
+      bgp:
+        autonomous-system: 4200000004
+        enable: on
+        router-id: 10.227.20.77
+    system:
+      hostname: SN2201
+    vrf:
+      default:
+        router:
+          bgp:
+            address-family:
+              ipv4-unicast:
+                enable: on
+                redistribute:
+                  connected:
+                    enable: on
+            enable: on
+            neighbor:
+              swp51:
+                remote-as: external
+                type: unnumbered
+              swp52:
+                remote-as: external
+                type: unnumbered
