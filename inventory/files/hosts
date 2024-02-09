@@ -30,6 +30,7 @@
 # 192.168.200.3 SN4600-2
 # 192.168.200.4 SN2201
 # 192.168.200.5 Extern
+# 192.168.200.250 TS netq2 netq-ts
 
 #[oob-switch]
 #oob-mgmt-switch ansible_host=192.168.200.10
