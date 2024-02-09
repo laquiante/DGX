@@ -1,0 +1,3 @@
+- set:
+    system:
+      hostname: sn4600-1
