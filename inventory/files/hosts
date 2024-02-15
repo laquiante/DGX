@@ -45,10 +45,10 @@ DGX-4 ansible_host=192.168.200.9
   
 # 29-JAN-2024
 [dgx_pod_all_fabrics]
-SN4600-1 ansible=192.168.200.2
-SN4600-2 ansible=192.168.200.3
-SN2201 ansible=192.168.200.4
-Extern ansible=192.168.200.5
+SN4600-1 ansible_host=192.168.200.2
+SN4600-2 ansible_host=192.168.200.3
+SN2201 ansible_host=192.168.200.4
+Extern ansible_host=192.168.200.5
   
 # 29-JAN-2024
 [dgx_management]
