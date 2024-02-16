@@ -1,4 +1,4 @@
-- hosts: DGX-1 DGX-2 DGX-3 DGC-4
+- hosts: DGX-1 DGX-2 DGX-3 DGX-4
   name: netplan
   become: yes
   gather_facts: no
